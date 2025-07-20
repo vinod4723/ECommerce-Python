@@ -22,3 +22,18 @@ We need to add all the depedenciesin thisfile and once we have all the detail th
 
 >> pip install -r requirements.txt
 ```
+
+### Setup the sql server user (i'm using sql server in this case)
+#### Run below script to create user in sql server database.
+```
+
+USE master;
+GO
+CREATE LOGIN <UserName> WITH PASSWORD = '<Give Password>';
+GO
+USE EcommerceDb;
+GO
+CREATE USER <UserName> FOR LOGIN <UserName>;
+ALTER ROLE db_owner ADD MEMBER <UserName>;
+
+```

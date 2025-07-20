@@ -1,0 +1,5 @@
+sqlalchemy
+FastAPI
+pyodbc
+Flask
+Flask-SQLAlchemy
